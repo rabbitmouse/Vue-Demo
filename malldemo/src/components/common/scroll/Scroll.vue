@@ -38,16 +38,27 @@
         this.$emit('scroll', position)
       })
 
-      this.scroll.on('pullingUp', () => {
-        this.$emit('pullingUp')
-      })
+      if (this.pullUpLoad) {
+        this.scroll.on('pullingUp', () => {
+          console.log('pullingUp ====== pullingUp')
+          this.$emit('pullingUp')
+        })
+      }
+
     },
     methods: {
+      refresh() {
+        this.scroll && this.scroll.refresh()
+      },
       scrollTo(x, y, time=250) {
-        this.scroll.scrollTo(x, y, time)
+        this.scroll && this.scroll.scrollTo(x, y, time)
       },
       finishPullUp() {
+        console.log('finishPullUp ====')
         this.scroll.finishPullUp()
+      },
+      getSrollY() {
+        return this.scroll ? this.scroll.y : 0
       }
     }
   }

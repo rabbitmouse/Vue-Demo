@@ -15,7 +15,7 @@
       <home-swiper :banners="banners" />
         <recommend-view :recommends="recommends" />
         <feature-view/>
-        <tab-control class="tab-control"
+        <tab-control ref="tabControl"
                     :titles="['流行','新款','精选']"
                     @tabClick="tabClick"/>
         <goods-list :goods="showGoods" />
@@ -37,6 +37,7 @@
   import BackTop from 'components/content/backTop/BackTop'
 
   import { getMultiData, getProductData } from 'network/home'
+  import {itemListListenerMixin} from 'common/mixin'
 
   export default {
     name: 'home',
@@ -50,6 +51,7 @@
       Scroll,
       BackTop
     },
+    mixins: [itemListListenerMixin],
     data() {
       return {
         banners: [],
@@ -61,12 +63,21 @@
         },
         currentType: 'pop',
         isShowBackTop: false,
+        tabOffsetTop: 0,
+        saveY: 0,
       }
     },
     computed: {
       showGoods() {
         return this.goods[this.currentType].list
       }
+    },
+    activated() {
+      this.$refs.scroll.scrollTo(0, this.saveY, 0)
+      this.$refs.scroll.refresh()
+    },
+    deactivated() {
+      this.saveY = this.$refs.scroll.getSrollY()
     },
     created() {
       this.getHomeMultidata()
@@ -75,10 +86,13 @@
       this.getHomeGoods('new')
       this.getHomeGoods('sell')
     },
+    mounted() {
+      // 获取组件的属性
+      this.tabOffsetTop = this.$refs.tabControl.$el.offsetTop
+    },
     methods: {
       // 事件
       tabClick(index) {
-        console.log(index)
         switch (index) {
           case 0:
             this.currentType = 'pop'
@@ -90,6 +104,7 @@
             this.currentType = 'sell'
             break
         }
+        this.$refs.scroll.refresh()
       },
 
       backClick() {
@@ -99,6 +114,7 @@
       contentScroll(positon) {
         this.isShowBackTop = Math.abs(positon.y) > 1000
       },
+
       loadMore() {
         this.getHomeGoods(this.currentType)
       },
@@ -117,7 +133,7 @@
         this.goods[type].list.push(...res.data.list)
         this.goods[type].page += 1
 
-        this.refs.scroll.finishPullUp()
+        this.$refs.scroll.finishPullUp()
       }).catch(e=>{
         console.log(e)
       })
@@ -138,11 +154,6 @@
     left: 0;
     right: 0;
     top: 0;
-    z-index: 9;
-  }
-  .tab-control {
-    position: sticky;
-    top: 44px;
     z-index: 9;
   }
   .content {
