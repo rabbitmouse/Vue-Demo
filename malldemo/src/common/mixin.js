@@ -3,14 +3,15 @@ import {debounce} from './utils'
 export const itemListListenerMixin = {
   data() {
     return {
-      itemImgListener: null
+      itemImgListener: null,
+      newRefresh: null
     }
   },
   mounted() {
     // 图片加载监听
-    const refresh = debounce(this.$refs.scroll.refresh, 500)
+    this.newRefresh = debounce(this.$refs.scroll.refresh, 500)
     this.itemImgListener = () => {
-      refresh()
+      this.newRefresh()
     }
     this.$bus.$on('itemImageLoad', this.itemImgListener)
   },
