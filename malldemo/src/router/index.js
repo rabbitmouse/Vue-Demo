@@ -6,6 +6,7 @@ const Category = () => import('../views/category/Category')
 const Cart = () => import('../views/cart/Cart')
 const Profile = () => import('../views/profile/Profile')
 const Detail = () => import('../views/detail/Detail')
+const Resume = () => import('../views/person/Resume')
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,10 @@ const routes = [
     {
       path: '/detail/:id',
       component: Detail,
+    },
+    {
+      path: '/resume',
+      component: Resume,
     }
 ]
 
