@@ -2,7 +2,9 @@
   <main id="resume">
     <article>
       <section>
-        <div class="section">基本信息</div>
+        <div class="section">
+          <h3 class="h3">基本信息</h3>
+        </div>
         <div class="base-info">
           <h1>猪猪猪</h1>
           <div class='personal'>
@@ -14,39 +16,81 @@
         </div>
       </section>
       <section>
-        <div class="section">专业技能</div>
-        <div class="base-box" v-for="(item, index) in skills" :key="index">
-          <span>{{index + 1}}. {{item}}</span>
+        <div class="section">
+          <h3 class="h3">自我评价</h3>
+        </div>
+        <div class="title-box">
+          <p class="content-text">{{skills}}</p>
         </div>
       </section>
       <section>
-        <div class="section">工作经历</div>
-        <div class="base-box" v-for="(item, index) in companys" :key="index">
+        <div class="section">
+          <h3 class="h3">专业技能</h3>
+        </div>
+        <div class="title-box">
+          <p class="content-text">{{professional}}</p>
+        </div>
+      </section>
+      <section>
+        <div class="section">
+          <h3 class="h3">工作经历</h3>
+        </div>
+        <div class="title-box" v-for="(item, index) in companys" :key="index">
           <div>
-            <span class="h2">{{item.name}}</span>
+            <h2 class="h2 inline">{{item.name}}</h2>
             <span class="time-text">{{item.time}}</span>
           </div>
-          <div class="base-box">
-            <p class="h3">工作内容</p>
-            <p class="content-text">侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在</p>
+          <div class="title-box">
+            <h3 class="h3">工作内容</h3>
+            <p class="content-text">{{item.content}}</p>
           </div>
-          <div class="base-box">
-            <p class="h3">主要业绩</p>
-            <p class="content-text">侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在侄子我吱吱吱吱在</p>
+          <div class="title-box">
+            <h3 class="h3">主要业绩</h3>
+            <p class="content-text">{{item.achievement}}</p>
           </div>
         </div>
       </section>
       <section>
-        <div class="section">项目经历</div>
-        <div class="base-box" v-for="(item, index) in skills" :key="index">
-          <span>{{index + 1}}. {{item}}</span>
+        <div class="section">
+          <h3 class="h3">项目经历</h3>
+        </div>
+        <div class="title-box bottom-line" v-for="(item, index) in products" :key="index">
+          <div>
+            <h2 class="h2 inline">{{item.name}}</h2>
+            <span class="time-text">{{item.time}}</span>
+            <p class="work">项目职责：{{item.work}}</p>
+          </div>
+          <div class="title-box">
+            <h3 class="h3">项目描述</h3>
+            <p class="content-text">{{item.desc}}</p>
+          </div>
+          <div class="title-box">
+            <h3 class="h3">主要业绩</h3>
+            <p class="content-text">{{item.duty}}</p>
+          </div>
+          <div class="title-box">
+            <p class="content-text">{{item.content}}</p>
+          </div>
         </div>
 
       </section>
       <section>
-        <div class="section">开源项目</div>
-        <div class="base-box" v-for="(item, index) in skills" :key="index">
-          <span>{{index + 1}}. {{item}}</span>
+        <div class="section">
+          <h3 class="h3">开源项目</h3>
+        </div>
+        <div class="title-box" v-for="(item, index) in works" :key="index">
+          <div>
+            <h2 class="h2 inline">{{item.name}}</h2>
+            <p class="work">项目描述：{{item.title}}</p>
+          </div>
+          <div class="title-box">
+            <h3 class="h3">主要功能</h3>
+            <p class="content-text">{{item.function}}</p>
+          </div>
+          <div class="title-box">
+            <h3 class="h3">项目地址</h3>
+            <p class="content-text url-text">{{item.url}}</p>
+          </div>
         </div>
       </section>
     </article>
@@ -63,37 +107,156 @@
     },
     data() {
       return {
-        skills: ['111111', '222222,', '3333333'],
+        skills: '5年开发经验，大前端开发。\n熟练掌握iOS开发技术、ReactNative跨平台开发框架、Vue框架。\n熟练掌握Objective-C、Swift、JavaScript。\n掌握常用的数据结构与算法，掌握常用的设计模式。\n有多个线上app经验，能够独立开发iOS APP，熟练掌握开发工具及证书配置等上线流畅。',
+        professional: '深入了解Objective-C，熟练使用Swift，熟悉C/C++\n熟练掌握JavaScript，Html，CSS，熟练使用ReactNative、Vue等前端开发框架\n深入理解iOS内存管理机制，runtime，runloop，多线程技术\n熟练使用git，svn代码管理\n掌握常用的数据结构与算法\n掌握HTTP，TCP，UDP网络协议，\n熟练掌握iOS开发账号证书配置及应用上架流程',
         companys: [
           {
             name: '成都二十三魔方生物科技有限公司',
             time: '2019.8 - 至今',
-            content: '',
-            achievement: ''
+            content: '负责23魔方App的开发维护\n负责web项目的业务开发\n负责后台项目的功能开发\n负责新技术的更新和实施',
+            achievement: '主导ReactNative框架的升级\n主导了产品账户体系的代码重构\n参与公司App、Web、后台相关项目的开发\n承担iOS原生功能的开发'
           },
           {
             name: '四川中清科华云联科技有限公司',
             time: '2018.6 - 2019.7',
-            content: '',
-            achievement: ''
+            content: '项目的整体架构\n主要业务的开发\n复杂界面的绘制，通用组件的封装\napp性能调优',
+            achievement: '优化app运行时内存消耗\n中清健康管家的商城模块重构，用户模块重构\n完成协同助手的项目架构，日程模块及其他业务逻辑\n完成复杂业务如：健康数据的复杂图表界面，AI智能助手模块的功能实现，IM界面框架的搭建和封装，搜索界面框架的搭建和封装'
           },
           {
             name: '四川品胜电子有限公司',
             time: '2018.3 - 2018.6',
-            content: '',
-            achievement: ''
+            content: '负责公司内部 OCSS Store系统的开发和维护\n视频采集功能的优化迭代',
+            achievement: '在职期间保质保量完成公司安排工作\n工作、考勤均无不良记录\n后因公司战略规划问题被迫解约'
           },
           {
             name: '成都炎龙科技有限公司',
             time: '2016.3 - 2018.3',
-            content: '',
-            achievement: ''
+            content: '完成iOS app的基础架构\n根据产品需求完成具体业务逻辑\n与产品，运营，技术领导沟通讨论产品需求\n技术升级，提升代码质量，封装UI组件',
+            achievement: '在职期间完成多个app的开发到上线的任务\n完成社交，娱乐，阅读，工具多种类型的产品需求\n阅读类app在app store的图书排行榜上最高排名前50\n实现社交类app的富文本编辑功能与html展示交互的技术设计'
           },
           {
             name: '成都华律网络服务有限公司',
             time: '2015.3 - 2016.3',
-            content: '',
-            achievement: ''
+            content: '根据产品需求开发iOS app的业务逻辑\n根据UI设计开发iOS app的界面',
+            achievement: '独立完成律信，律信律师端app的架构开发\n根据产品需求完成IM，网络，消息推送等业务模块'
+          },
+        ],
+        products: [{
+          name: '23魔方',
+          work: 'ReactNative开发，iOS开发',
+          time: '2019.8 - 至今',
+          desc: '23魔方是一款提供基因检测服务的医疗健康类项目。为用户提供遗传风险预测、祖源、健康等功能。',
+          duty: '负责ReactNative项目的业务功能开发\n完成iOS原生模块需求\n主导ReactNative框架升级\n负责推动app账户系统代码重构\n负责第三方sdk的升级与私有库维护',
+          technique: '',
+        },
+        {
+          name: '23魔方Web',
+          work: '前端开发',
+          time: '2019.8 - 至今',
+          desc: '用于承载公司官网、web端业务、营销落地页的web项目',
+          duty: '负责web页面的业务功能开发\n完成活动落地页开发',
+          technique: '',
+        },
+        {
+          name: 'cms，uoms后台管理系统',
+          work: '前端开发',
+          time: '2019.8 - 至今',
+          desc: 'cms、uoms是公司的后台项目，用于配置项目数据以实现C端项目的业务逻辑',
+          duty: '负责活动、检测流程、营销等后台功能的开发',
+          technique: '',
+        },
+        {
+          name: '中清协同助手',
+          work: 'iOS开发',
+          time: '2018.10 - 2019.6',
+          desc: '中清协同助手是企业内部管理App，提供合同管理，日程管理，渠道管理，商品展示等功能',
+          duty: '项目整体架构搭建\n日程管理模块实现\n公共自定义UI控件封装\n其他业务逻辑开发',
+          technique: '',
+        },
+        {
+          name: '中清健康管家',
+          work: 'iOS开发',
+          time: '2018.7 - 2019.6',
+          desc: '中清健康管家是一款医疗健康类项目，为用户提供基因检测，数据分析，健康文章，健康商城等功能',
+          duty: '核心业务逻辑开发\nApp性能调优\n公共组件疯转\n实现复杂界面和交互\n历史模块代码重构',
+          technique: '',
+        },
+        {
+          name: '汝影（华西乳腺管家)',
+          work: 'iOS开发',
+          time: '2018.11 - 2019.6',
+          desc: '该产品是为华西乳腺科提供的在线问诊APP，病人可以在APP上在线咨询医生，查看乳腺相关的疾病科普',
+          duty: '完全自定义IM聊天界面框架\n对接百度语音合成与识别的SDK，封装工具类\n对接腾讯IM通讯协议',
+          technique: '',
+        },
+        {
+          name: 'OCSS Store',
+          work: 'iOS开发',
+          time: '2018.3 - 2018.6',
+          desc: 'OCSS系统是一款公司内部使用的任务管理系统，可以快速查看公司的相关任务，订单状态，工作情况、销售情况等数据。',
+          duty: '部分模块的性能优化\n视频采集功能性能优化',
+          technique: '',
+        },
+        {
+          name: '老子搜书',
+          work: 'iOS开发',
+          time: '2016.9 - 2018.3',
+          desc: '老子搜书是一款阅读器APP，使用定向的搜索引擎搜索全网的各类小说。用户可使用APP直接或离线阅读书籍。并且提供了另好的阅读体验，用户可以自定义阅读背景颜色，字体，段落等样式。应用还提供了多种翻页方式供用户选择。还实现了自动阅读，语音朗读这类方便的阅读方式。',
+          duty: 'YYText+CoreText搭建富文本阅读界面\nAVFoundation实现语音朗读\nUIPageController，UITableView，自定义View实现的多种翻页动画\n实现自动阅读，手势亮度调整\nObjective-C和C++混编，集成搜索引擎\n整体项目架构\n产品需求设计，交互设计，APP在App Store图书类排行榜排名前50，次日留存60%-70%',
+          technique: '',
+        },
+        {
+          name: '一抓超人',
+          work: 'iOS开发',
+          time: '2017.11 - 2018.1',
+          desc: '该项目是一款直播在线抓娃娃的娱乐APP，通过TCP/IP发送数据包的方式实现远程操作抓娃娃机，再通过直播的形式反馈给用户。',
+          duty: '远程控制娃娃机，使用WebSocket+TCP/IP发送数据协议包\n直播视频，IJKMediaPlayer实现，参数优化，播放流畅\nMVC架构项目，实现瀑布流，自定义按钮等复杂UI',
+          technique: '',
+        },
+        {
+          name: '妈妈咪呀',
+          work: 'iOS开发',
+          time: '2016.11 - 2017.6',
+          desc: '妈妈咪是一款母婴类社交app，主要模块包含新闻头条，母婴资讯，百科，论坛，问答。为用户搭建一块完整的母婴社区',
+          duty: '核心业务功能开发\n自定义富文本编辑器\n复杂页面搭建',
+          technique: '',
+        },
+        {
+          name: '202强力清扫',
+          work: 'iOS开发',
+          time: '2016.3 - 2016.5',
+          desc: '中清健康管家是一款医疗健康类项目，为用户提供基因检测，数据分析，健康文章，健康商城等功能',
+          duty: '核心业务逻辑开发\nApp性能调优\n公共组件疯转\n实现复杂界面和交互\n历史模块代码重构',
+          technique: '',
+        },
+        {
+          name: '律信律师',
+          work: 'iOS开发',
+          time: '2015.3 - 2016.3',
+          desc: '律信律师是一款针对公众的律师服务的app，用户可以通过平台获取全国各地的律师，向律师进行法律在线咨询，法务服务，案件委托等服务',
+          duty: ' 项目架构搭建\n对接支付宝，微信等第三方SDK\n配置证书，推送消息，上线流程',
+          technique: '',
+        },
+        {
+          name: '律信',
+          work: 'iOS开发',
+          time: '2015.6 - 2016.3',
+          desc: '律信是一款针对律师的律师服务的app，律师可以通过律信获取全国提交的法律问题。',
+          duty: '聊天界面实现\n业务功能开发\n集成第三方SDK',
+          technique: '',
+        }],
+        works: [
+          {
+            name: 'ZQSearchController',
+            title: '搜索功能组件',
+            function: '搜索主界面、模糊匹配界面，搜索结果界面之前的状态切换。\n可使用自定义结果界面进行搜索结果的展示。\n输入内容节流处理，输入完毕后 0.5 秒后再发生搜索事件。\n支持搜索历史，\n支持热门搜索配置',
+            url: 'https://github.com/rabbitmouse/ZQSearchController'
+          },
+          {
+            name: 'ZQChatKit',
+            title: '聊天界面框架',
+            function: 'UITableView搭建的聊天UI框架\n支持聊天气泡\n图片展示\n视频播放\n语音录制及播放\n失败异步重发\n自定义工具栏',
+            url: 'https://github.com/rabbitmouse/ZQChatKit'
           },
         ]
       }
@@ -113,12 +276,33 @@
   background: #fff;
   width: 650px;
   font-size: 14px;
+  color: #000;
+  padding: 0 20px;
 }
 .section {
-  background: #00bbff;
-  color: #fff;
+  color: #000;
   margin-top: 20px;
-  height: 30px;
+}
+.section .h3::before {
+  content: '';
+  border-left: 2px solid #049cfd;
+  position: relative;
+  left: -5px;
+  top: 0;
+  bottom: 0;
+}
+.bottom-line {
+  border-bottom-color: #f1f1f3;
+  border-bottom-width: 0.5px;
+  border-bottom-style: solid;
+}
+.work {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+}
+.inline {
+  display: inline-block;
 }
 .h1 {
   font-weight: 700;
@@ -126,33 +310,33 @@
   font-size: 18px;
 }
 .h2 {
-  color: #333;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 18px;
 }
 .h3 {
-  color: #444;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
 }
 .h3 + p {
   margin-top: 10px;
 }
 .content-text {
-  color: #444;
-  line-height: 18px;
+  color: #333;
+  white-space: pre-line;
+  line-height: 26px;
+}
+.url-text {
+  color: #004bbb
 }
 .time-text {
   margin-left: 20px;
-  color: #bbb;
-  font-size: 12px;
+  color: #999;
+  font-size: 14px;
 }
 .base-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.base-box {
+.title-box {
   margin-top: 20px;
 }
 </style>
