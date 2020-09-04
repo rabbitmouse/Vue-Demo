@@ -13,7 +13,11 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '',
-        redirect: '/home',
+        redirect: '/resume',
+    },
+    {
+      path: '/resume',
+      component: Resume,
     },
     {
         path: '/home',
@@ -35,10 +39,7 @@ const routes = [
       path: '/detail/:id',
       component: Detail,
     },
-    {
-      path: '/resume',
-      component: Resume,
-    }
+
 ]
 
 const router = new VueRouter({
