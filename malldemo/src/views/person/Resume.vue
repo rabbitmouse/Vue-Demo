@@ -8,7 +8,7 @@
         <h3 class="h3">基本信息</h3>
         <div class='base-box'>
           <p class="base-text">朱志勤</p>
-          <p class="base-text"> 男 | 28岁 | 本科 | 成都 | 在职-考虑机会</p>
+          <p class="base-text"> 男 | 29岁 | 本科 | 成都 | 在职-考虑机会</p>
           <p class="base-text">求职意向：iOS开发工程师 | 大前端开发工程师</p>
           <p class="base-text">工作经验：6年</p>
           <p class="base-text">英语等级：CET-4</p>
@@ -118,36 +118,29 @@
     },
     data() {
       return {
-        skills: '5年开发经验，大前端开发。\n熟练掌握iOS开发技术，可使用Objective-C、Swift开发iOS程序。\n 具备Hybrid开发经验，可使用JavaScript或React-Naive进行移动端的跨平台开发。\n 具有良好的沟通交流能力，有担任业务团队「PM」和敏捷团队「SM」。',
-        professional: '深入了解Objective-C，熟练使用Swift，熟悉C/C++\n熟练掌握JavaScript，Html，CSS，熟练使用ReactNative、Vue等前端开发框架\n深入理解iOS内存管理机制，block，runtime，runloop，多线程技术\n熟练使用git，svn代码管理\n掌握常用的数据结构与算法\n熟悉HTTP，TCP，UDP等网络协议。\n熟练掌握iOS开发账号证书配置及应用上架流程',
+        skills: '6年开发经验，深入了解iOS开发技术，掌握web相关开发技能，有大前端开发经验。\n熟练掌握iOS开发技术，可使用Objective-C、Swift开发iOS程序。\n 具备Hybrid开发经验，可使用JavaScript或React-Naive进行移动端的跨平台开发。\n 具有良好的沟通交流能力，有担任业务团队「PM」和敏捷团队「SM」。',
+        professional: '深入理解Objective-C、Swift，熟悉C/C++\n熟练掌握JavaScript，Html，CSS，熟练使用ReactNative、Vue等前端开发框架\n深入理解iOS内存管理机制，block，runtime，runloop，多线程技术\n对iOS程序架构和性能优化有一定经验\n熟练使用git，svn代码管理\n掌握常用的数据结构与算法\n掌握HTTP，HTTPS，TCP，UDP等网络协议。\n熟练掌握iOS开发账号证书配置及应用上架流程',
         companys: [
           {
             name: '成都二十三魔方生物科技有限公司',
             time: '2019.8 - 至今',
-            job: '大前端开发工程师、项目经理、敏捷教练',
-            content: '负责23魔方App的开发维护\n负责web项目、后台项目的功能开发\n负责新技术的更新和实施\n负责敏捷团队的流程监督和项目需求的沟通协调，质量把控等',
-            achievement: '主导ReactNative框架的升级\n主导了产品账户体系的代码重构\n参与公司App、Web、后台相关项目的开发\n承担iOS原生功能的开发\n担任团队项目经理和敏捷教练，保证业务团队的良好运行和高质量的需求交付'
+            job: 'iOS高级开发、大前端开发、项目经理、敏捷教练',
+            content: '负责App项目核心功能的开发、维护。通用组件的设计架构。\n负责web项目、后台项目的功能开发\n负责新技术的更新和实施\n负责敏捷团队的流程监督和项目需求的沟通协调，质量把控等',
+            achievement: '主导ReactNative框架的升级\n基于JSBridge实现App和Web页面的通信功能\n主导了产品账户体系的代码重构\n参与公司App、Web、后台相关项目的开发\n承担iOS原生功能的开发\n担任团队项目经理和敏捷教练，保证业务团队的良好运行和高质量的需求交付'
           },
           {
             name: '四川中清科华云联科技有限公司',
             time: '2018.6 - 2019.7',
             job: '高级iOS开发工程师',
             content: '项目的整体架构\n主要业务的开发\n复杂界面的绘制，通用组件的封装\napp性能调优',
-            achievement: '优化app运行时内存消耗\n商城模块重构，用户模块重构\n参与项目模块的架构及其他业务逻辑开发\n完成复杂业务如：健康数据的复杂图表界面，AI智能助手模块的功能实现，IM界面框架的搭建和封装，搜索界面框架的搭建和封装'
-          },
-          {
-            name: '四川品胜电子有限公司',
-            time: '2018.3 - 2018.6',
-            job: '高级iOS开发工程师',
-            content: '负责公司内部 OCSS Store系统的开发和维护\n视频采集功能的优化迭代',
-            achievement: '在职期间保质保量完成公司安排工作\n工作、考勤均无不良记录\n后因公司战略规划问题被迫解约'
+            achievement: 'App性能优化\n业务模块的代码重构\n代码架构及核心业务逻辑开发\n完成复杂业务如：健康数据的复杂图表界面，AI智能助手模块的功能实现，IM界面框架的搭建和封装，搜索界面框架的搭建和封装'
           },
           {
             name: '成都炎龙科技有限公司',
             time: '2016.3 - 2018.3',
             job: 'iOS开发工程师',
-            content: '完成iOS app的基础架构\n根据产品需求完成具体业务逻辑\n与产品，运营，技术领导沟通讨论产品需求\n技术升级，提升代码质量，封装UI组件',
-            achievement: '在职期间完成多个app的开发到上线的任务\n完成社交，娱乐，阅读，工具多种类型的产品需求\n阅读类app在app store的图书排行榜上最高排名前50\n实现社交类app的富文本编辑功能与html展示交互的技术设计'
+            content: 'iOS App的基础架构及业务逻辑\n技术升级，新技术调研和实施，通用组件封装',
+            achievement: '在职期间完成多个app的开发到上线的任务\n完成社交，娱乐，阅读，工具多种类型的产品需求\n阅读类app在app store的图书排行榜上最高排名前50\n实现社交类App的富文本编辑功能与html展示交互的技术方案'
           },
           {
             name: '成都华律网络服务有限公司',
@@ -162,15 +155,15 @@
           work: 'ReactNative开发，iOS开发',
           time: '2019.8 - 至今',
           desc: '23魔方是一款提供基因检测服务的医疗健康类项目。为用户提供遗传风险预测、祖源、健康等功能。',
-          duty: '负责ReactNative项目的业务功能开发\n完成iOS原生模块需求\n主导ReactNative框架升级\n负责推动app账户系统代码重构\n负责第三方sdk的升级与私有库维护',
-          technique: ['ReactNative', 'iOS', 'JavaScript'],
+          duty: '负责ReactNative项目的业务功能开发\n完成iOS原生模块需求\n主导ReactNative框架升级\n实现基于JSBridge的App和Web模块通信\n负责第三方sdk的升级与私有库维护',
+          technique: ['ReactNative', 'Swift', 'JavaScript'],
         },
         {
-          name: '23魔方Web',
+          name: '23魔方 - Web',
           work: '前端开发',
           time: '2019.8 - 至今',
           desc: '用于承载公司官网、web端业务、营销落地页的web项目',
-          duty: '负责web页面的业务功能开发\n完成活动落地页开发',
+          duty: '负责App中内嵌的web页面开发\n营销活动类的web页面开发',
           technique: ['Vue', 'Nuxt', 'JavaScript'],
         },
         {
@@ -186,7 +179,7 @@
           work: 'iOS开发，项目架构',
           time: '2018.10 - 2019.6',
           desc: '中清协同助手是企业内部管理App，提供合同管理，日程管理，渠道管理，商品展示等功能',
-          duty: '项目整体架构搭建\n日程管理模块实现\n公共自定义UI控件封装\n其他业务逻辑开发',
+          duty: '项目整体架构搭建\n公共自定义UI控件封装\n其他业务逻辑开发',
           technique: ['iOS SDK', 'Objective-C', 'MVC'],
         },
         {
@@ -194,8 +187,8 @@
           work: 'iOS开发',
           time: '2018.7 - 2019.6',
           desc: '中清健康管家是一款医疗健康类项目，为用户提供基因检测，数据分析，健康文章，健康商城等功能',
-          duty: '核心业务逻辑开发\nApp性能调优\n实现复杂界面和交互\n历史模块代码重构和公共组件封装',
-          technique: ['iOS SDK', 'Objective-C', 'HTML'],
+          duty: '核心业务逻辑开发\nApp性能优化\n实现复杂界面和交互\n代码重构和公共组件封装',
+          technique: ['iOS SDK', 'Objective-C', 'Charts', 'HTTPS'],
         },
         {
           name: '汝影（华西乳腺管家)',
@@ -206,27 +199,19 @@
           technique: ['Objective-C', '百度语音SDK', 'IM'],
         },
         {
-          name: 'OCSS Store',
-          work: 'iOS开发',
-          time: '2018.3 - 2018.6',
-          desc: 'OCSS系统是一款公司内部使用的任务管理系统，可以快速查看公司的相关任务，订单状态，工作情况、销售情况等数据。',
-          duty: '部分模块的性能优化\n视频采集功能性能优化',
-          technique: ['Swift', 'AVFoundation'],
-        },
-        {
           name: '老子搜书',
-          work: 'iOS开发，产品规划',
+          work: 'iOS开发，项目架构，产品规划',
           time: '2016.9 - 2018.3',
           desc: '老子搜书是一款阅读器APP，使用定向的搜索引擎搜索全网的各类小说。用户可使用APP直接或离线阅读书籍。并且提供了另好的阅读体验，用户可以自定义阅读背景颜色，字体，段落等样式。应用还提供了多种翻页方式供用户选择。还实现了自动阅读，语音朗读这类方便的阅读方式。',
           duty: 'YYText+CoreText搭建富文本阅读界面\nAVFoundation实现语音朗读\nUIPageController，UITableView，自定义View实现的多种翻页动画\n实现自动阅读，手势亮度调整\nObjective-C和C++混编，集成搜索引擎\n整体项目架构\n产品需求设计，交互设计，APP在App Store图书类排行榜排名前50，次日留存60%-70%',
-          technique: ['Objective-C','iOS SDK', 'CoreText', 'TCP', '多线程'],
+          technique: ['Objective-C','AVFoundation', 'NSOperationQueue', 'TCP', 'C++'],
         },
         {
           name: '一抓超人',
           work: 'iOS开发',
           time: '2017.11 - 2018.1',
           desc: '该项目是一款直播在线抓娃娃的娱乐APP，通过发送数据包的方式实现远程操作抓娃娃机，再通过直播的形式反馈给用户。',
-          duty: '使用WebSocket发送数据协议包实现远程控制\n直播视频，IJKMediaPlayer实现，参数优化，播放流畅\nMVC架构项目，实现瀑布流，自定义按钮等复杂UI',
+          duty: '使用WebSocket发送数据协议包实现远程控制\n基于IJKMediaPlayer实现的视频直播\nMVC架构项目，实现瀑布流，自定义按钮等复杂UI',
           technique: ['Objective-C', 'UDP', 'WebSocket'],
         },
         {
@@ -242,7 +227,7 @@
           work: 'iOS开发',
           time: '2016.3 - 2016.5',
           desc: '202强力清扫是一款照片清理软件，帮助用户清理相似图片，压缩大体积图片的工具App',
-          duty: '完成相册操作模块的封装\n完成任务队列模块',
+          duty: '完成相册操作模块的封装\n实现基于NSOperationQueue的异步任务队列',
           technique: ['Objective-C', 'PhotoKit', 'NSOperationQueue'],
         },
         {
