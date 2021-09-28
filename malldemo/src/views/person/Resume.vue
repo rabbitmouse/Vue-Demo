@@ -11,6 +11,7 @@
           <p class="base-text"> 男 | 29岁 | 本科 | 成都 | 在职-考虑机会</p>
           <p class="base-text">求职意向：iOS开发工程师 | 大前端开发工程师</p>
           <p class="base-text">工作经验：6年</p>
+          <p class="base-text">毕业时间：2015年</p>
           <p class="base-text">英语等级：CET-4</p>
           <div class="inline" style="margin-top: 10px"><p class="base-text"> <img class="icon" src="./university.png"> 四川大学锦城学院</p></div>
           <div class="inline"><p class="base-text"> <img class="icon" src="./major.png"> 软件工程 </p></div>
@@ -89,7 +90,7 @@
         <div class="section">
           <h3 class="h3">开源项目</h3>
         </div>
-        <div class="title-box" v-for="(item, index) in works" :key="index">
+        <div class="title-box bottom-line" v-for="(item, index) in works" :key="index">
           <div>
             <h2 class="h2 inline">{{item.name}}</h2>
             <p class="work">项目描述：{{item.title}}</p>
@@ -119,14 +120,14 @@
     data() {
       return {
         skills: '6年开发经验，深入了解iOS开发技术，掌握web相关开发技能，有大前端开发经验。\n熟练掌握iOS开发技术，可使用Objective-C、Swift开发iOS程序。\n 具备Hybrid开发经验，可使用JavaScript或React-Naive进行移动端的跨平台开发。\n 具有良好的沟通交流能力，有担任业务团队「PM」和敏捷团队「SM」。',
-        professional: '深入理解Objective-C、Swift，熟悉C/C++\n熟练掌握JavaScript，Html，CSS，熟练使用ReactNative、Vue等前端开发框架\n深入理解iOS内存管理机制，block，runtime，runloop，多线程技术\n对iOS程序架构和性能优化有一定经验\n熟练使用git，svn代码管理\n掌握常用的数据结构与算法\n掌握HTTP，HTTPS，TCP，UDP等网络协议。\n熟练掌握iOS开发账号证书配置及应用上架流程',
+        professional: '深入理解Objective-C、Swift，熟悉C/C++\n熟练掌握JavaScript，Html，CSS，熟练使用ReactNative、Vue等前端开发框架\n深入理解iOS内存管理机制，block，runtime，runloop，多线程技术\n对iOS程序架构和性能优化有一定经验\n熟练使用git，svn进行代码管理\n掌握常用的数据结构与算法\n掌握HTTP，HTTPS，TCP，UDP等网络协议。\n熟练掌握iOS开发账号证书配置及应用上架流程',
         companys: [
           {
             name: '成都二十三魔方生物科技有限公司',
             time: '2019.8 - 至今',
             job: 'iOS高级开发、大前端开发、项目经理、敏捷教练',
-            content: '负责App项目核心功能的开发、维护。通用组件的设计架构。\n负责web项目、后台项目的功能开发\n负责新技术的更新和实施\n负责敏捷团队的流程监督和项目需求的沟通协调，质量把控等',
-            achievement: '主导ReactNative框架的升级\n基于JSBridge实现App和Web页面的通信功能\n主导了产品账户体系的代码重构\n参与公司App、Web、后台相关项目的开发\n承担iOS原生功能的开发\n担任团队项目经理和敏捷教练，保证业务团队的良好运行和高质量的需求交付'
+            content: '负责App项目核心功能的开发、维护。通用组件的设计架构。\n负责web项目、后台项目的功能开发\n负责老技术的升级、维护。新技术的调研、推动落地\n负责敏捷团队的流程监督和项目需求的沟通协调，质量把控等',
+            achievement: '主导ReactNative框架的升级\n推动业务模块的重构、迭代\n参与公司App、Web、后台相关项目的开发\n承担iOS原生功能的开发\n担任团队项目经理和敏捷教练，保证业务团队的良好运行和高质量的需求交付'
           },
           {
             name: '四川中清科华云联科技有限公司',
@@ -143,7 +144,7 @@
             achievement: '在职期间完成多个app的开发到上线的任务\n完成社交，娱乐，阅读，工具多种类型的产品需求\n阅读类app在app store的图书排行榜上最高排名前50\n实现社交类App的富文本编辑功能与html展示交互的技术方案'
           },
           {
-            name: '成都华律网络服务有限公司',
+            name: '成都华律网络服务有限公司（实习）',
             time: '2015.3 - 2016.3',
             job: 'iOS开发工程师',
             content: '根据产品需求开发iOS app的业务逻辑\n根据UI设计开发iOS app的界面',
@@ -155,7 +156,7 @@
           work: 'ReactNative开发，iOS开发',
           time: '2019.8 - 至今',
           desc: '23魔方是一款提供基因检测服务的医疗健康类项目。为用户提供遗传风险预测、祖源、健康等功能。',
-          duty: '负责ReactNative项目的业务功能开发\n完成iOS原生模块需求\n主导ReactNative框架升级\n实现基于JSBridge的App和Web模块通信\n负责第三方sdk的升级与私有库维护',
+          duty: '负责ReactNative项目的业务功能开发\n负责iOS原生基础模块的支持\n主导ReactNative框架升级\n负责第三方sdk的升级与私有库维护',
           technique: ['ReactNative', 'Swift', 'JavaScript'],
         },
         {
@@ -259,6 +260,12 @@
             function: 'UITableView搭建的聊天UI框架\n支持聊天气泡\n图片展示\n视频播放\n语音录制及播放\n失败异步重发\n自定义工具栏',
             url: 'https://github.com/rabbitmouse/ZQChatKit'
           },
+          {
+            name: 'ZQAsyncTaskQueue',
+            title: '基于NSOperation的异步任务模块',
+            function: '对多种异步任务场景的方法封装。\n支持异步下的单个任务、多个任务的异步回调和批量回调\n支持对单个任务的暂停、取消\n',
+            url: 'https://github.com/rabbitmouse/ZQAsyncTaskQueue'
+          }
         ]
       }
     },
