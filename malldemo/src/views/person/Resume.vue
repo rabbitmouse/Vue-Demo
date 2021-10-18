@@ -161,6 +161,22 @@
           technique: ['ReactNative', 'Swift', 'JavaScript'],
         },
         {
+          name: '23魔方 - Web',
+          work: '前端开发',
+          time: '2019.8 - 至今',
+          desc: '用于承载公司官网、web端业务、营销落地页的web项目',
+          duty: '负责App中内嵌的web页面开发\n营销活动类的web页面开发',
+          technique: ['Vue', 'Nuxt', 'JavaScript'],
+        },
+        {
+          name: 'cms，uoms后台管理系统',
+          work: '前端开发',
+          time: '2019.8 - 至今',
+          desc: 'cms、uoms是公司的后台项目，用于配置项目数据以实现C端项目的业务逻辑',
+          duty: '负责活动、检测流程、营销等后台功能的开发',
+          technique: ['Vue', 'Element-UI', 'JavaScript'],
+        },
+        {
           name: '中清健康管家',
           work: 'iOS开发',
           time: '2018.7 - 2019.6',
